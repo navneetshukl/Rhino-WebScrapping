@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"log"
+	"os"
 	"strconv"
 
 	"github.com/gocolly/colly"
@@ -43,9 +44,9 @@ func main() {
 
 	}*/
 
-	/*enc:=json.NewEncoder(os.Stdout)
-	enc.SetIndent(""," ")
-	enc.Encode(allFacts)*/
+	enc := json.NewEncoder(os.Stdout)
+	enc.SetIndent("", " ")
+	enc.Encode(allFacts)
 
 	writeJSON(allFacts)
 }
